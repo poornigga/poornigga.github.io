@@ -6,6 +6,6 @@ paginate: 8
 permalink: /:title
 
 title: untitled
-url: http://poornigga.github.com
+url: http://poornigga.github.io
 feed: /atom.xml
-author_info: <a href="http://poornigga.github.com/">大狗</a>
+author_info: <a href="http://poornigga.github.io/">大狗</a>
