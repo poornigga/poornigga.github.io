@@ -7,6 +7,7 @@ description: 一个备忘
 
 #首先是防火墙，如果远程登陆，先放过部分常用服务
 
+
     # vim /etc/sysconfig/iptables
 
     *filter
