@@ -2,6 +2,7 @@
 layout: post
 title: centos 双网卡配置
 description: 公司需要一个新的服务器，2个网口，一个是内网访问，另外一个网口接外网，目的是让服务器本身上网下载资源，setup工具等;
+category: blog
 ---
 
 ## 双网卡配置双路网络备忘
