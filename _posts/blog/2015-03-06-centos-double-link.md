@@ -7,9 +7,21 @@ category: blog
 
 ## 双网卡配置双路网络备忘
 
-### setup static ip /etc/sysconfig/network-scripts/ifcfg-eno1/eno2
-port 1 : static ip 191.61.4.86 netmask 255.255.255.192 gateway 191.61.4.126
-port 2 : static ip 192.168.11.199 netmask 255.255.254.0 gateway 192.168.10.1
+###  首先配置2个网口的静态IP地址
+     setup static ip /etc/sysconfig/network-scripts/ifcfg-eno1/eno2
+
+```
+
+    port 1 : static ip 191.61.4.86 netmask 255.255.255.192 gateway 191.61.4.126
+    port 2 : static ip 192.168.11.199 netmask 255.255.254.0 gateway 192.168.10.1
+
+```
+
+### 配置路由表
+    可以根据static-routes的规则添加在/etc/sysconfig/static-routes 里面，
+    这么做的好处是不管重启系统还是重启网络服务，设置都会生效;
+    我加在了rc.local 文件里面，如果手动重启了网络服务，那么需要手动运行下这部分代码;
+    不过对于我们的系统，放机房手动重启网络的机会会很少,所以直接append了脚本啦...
 
 ```
     
