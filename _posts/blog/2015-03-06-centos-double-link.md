@@ -15,6 +15,8 @@ category: blog
 
 ```
 
+    # 默认网关启动后是192.168.10.1，此时能访问外网，不能访问内网的部分服务器
+    
     port 1 : static ip 191.61.4.86 netmask 255.255.255.192
     port 2 : static ip 192.168.11.199 netmask 255.255.254.0 gateway 192.168.10.1
 
@@ -49,8 +51,6 @@ category: blog
 ```
 
 append /etc/rc.local
-
-## 如果添加需要访问的内网网段到指定网口，默认网关是eno2
 
 restart network.
 
