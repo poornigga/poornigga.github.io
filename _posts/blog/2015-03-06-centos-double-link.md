@@ -10,9 +10,12 @@ category: blog
 ###  首先配置2个网口的静态IP地址
      setup static ip /etc/sysconfig/network-scripts/ifcfg-eno1/eno2
 
+ 默认网关只存在一个，我们选择外网优先，然后对于内网网段的特殊问题后面加网段到固定表;
+ 故，start ip 191.61.4.86 不需要设置gateway.
+
 ```
 
-    port 1 : static ip 191.61.4.86 netmask 255.255.255.192 gateway 191.61.4.126
+    port 1 : static ip 191.61.4.86 netmask 255.255.255.192
     port 2 : static ip 192.168.11.199 netmask 255.255.254.0 gateway 192.168.10.1
 
 ```
@@ -39,9 +42,15 @@ category: blog
     ip route add default via 192.168.10.1 dev eno2 src 192.168.11.199 table pub
     ip rule add from 192.168.11.199 table pub
 
+    # add static inner net to table phi
+    # nslookup result (seds/Address: /ip rule add to /g'...)
+    ip rule add to 130.140.80.134 table phi
+
 ```
 
 append /etc/rc.local
+
+## 如果添加需要访问的内网网段到指定网口，默认网关是eno2
 
 restart network.
 
