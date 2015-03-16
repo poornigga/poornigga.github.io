@@ -13,11 +13,10 @@ category: blog
 >  ubuntu ： apt-get install ldap-utils
 >  centos :  yum install openldap openldap-clients
 
-使用如下
+### 使用如下
 
->
-> ldapsearch -x "sAMAccountName" -W -D "cn=310xxxx,ou=Users,ou=CODE,dc=sample,dc=com" -b "ou=CODE,dc=sample,dc=com" -h code.sample.com
->
+>  ldapsearch -x "sAMAccountName" -W -D "cn=310xxxx,ou=Users,ou=CODE,dc=sample,dc=com" \ 
+>  -b "ou=CODE,dc=sample,dc=com" -h code.sample.com
 
 <ul>
 <li>-x 验证；-W 输入密码 ； cn  用户名；cn；用户组；ou 组织单元；dc 域 ； </li>
@@ -25,7 +24,6 @@ category: blog
 <li>-b search base,也要从LDAP管理员那里获取 </li>
 <li>-x 后面接用户名，sAMAccountName不能修改( Use simple authentication instead of SASL).</li>
 </ul>
-
 
 gitlab中LADP配置:
 
