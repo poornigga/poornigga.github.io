@@ -54,4 +54,11 @@ append /etc/rc.local
 
 restart network.
 
+参考: ref-1 [ref-1][], 2[2][], 3[linux策略路由][], 4[ip命令][]
+
 [poornigga]:    http://poornigga.github.io "poornigga"
+[1]: http://blog.sina.com.cn/s/blog_66719ff30100yft7.html "ref-1"
+[2]: http://blog.sinzy.net/jinjian/entry/21485 "ref-2"
+[3]: http://my.oschina.net/guol/blog/156607 "linux策略路由"
+[4]: http://blog.csdn.net/wolongzhumeng/article/details/8848389 "ip命令"
+
