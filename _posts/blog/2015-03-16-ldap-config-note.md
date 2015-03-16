@@ -47,8 +47,9 @@ main: # 'main' is the GitLab 'provider ID' of this LDAP server
 
 ```
 
-gitlab中配置postfix 发邮件选项[http://1585205.blog.51cto.com/1575205/1153091]
+gitlab中配置postfix 发邮件选项[postfix][1]
 
 
+[1]: http://1585205.blog.51cto.com/1575205/1153091 "postfix"
 
 ---
