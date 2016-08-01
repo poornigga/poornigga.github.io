@@ -14,5 +14,9 @@ description: cubietruck 设备初始化
 3. update your repo, `sudo apt-get update`
 
 
+## ap mode related file
+* /etc/network/interfaces
+* /etc/modules
+
 [domain]:    http://poornigga.github.io  "博客"
 [1]:    {{ page.url}}  ({{ page.title }})
